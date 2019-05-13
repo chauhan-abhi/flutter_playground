@@ -16,15 +16,30 @@ class ImageList extends StatelessWidget {
       itemCount: images.length,
       itemBuilder: (context, int index) {
         // put logic of constructing each item
-        return Container(
-          padding: EdgeInsets.all(20.0),
-          margin: EdgeInsets.all(24.0),
-          child: Image.network(images[index].url),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey)
-          ),
-          );
+
+        return buildImageCard(images[index]);
       },
+    );
+  }
+
+  Widget buildImageCard(ImageModel image) {
+    return Container(
+        padding: EdgeInsets.all(20.0),
+        margin: EdgeInsets.all(24.0),
+        child: Column(
+          children: <Widget>[
+            Padding(
+              child: Image.network(image.url),
+              padding: EdgeInsets.only(
+                bottom: 12.0,
+                ),
+              ),
+            Text(image.title),
+          ],
+        ),
+        decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey)
+      ),
     );
   }
 }
