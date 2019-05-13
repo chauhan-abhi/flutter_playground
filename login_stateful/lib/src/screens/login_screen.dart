@@ -8,16 +8,29 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
+  /**
+   * to reference a widget that has been rendered
+   * to a device we create a Global Key
+   * and associate it with the FormState and 
+   * not the Form
+   */
+  final formKey =GlobalKey<FormState>();
+  String email = '';
+  String password = '';
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(20.0),
       child: Form(
+        key: formKey,
         child: Column(
           children: <Widget>[
             emailField(),
             passswordField(),
-            //submitButton(),            
+            //benifit from this approach
+            Container(margin: EdgeInsets.only(top: 25.0)),
+            submitButton(),            
           ],
         ),
       ),
@@ -33,20 +46,33 @@ Widget emailField() {
       labelText: 'Email Address',
       hintText: 'you@example.com',
     ),
+    validator: (String value) {
+      if(!value.contains('@')) {
+        return 'Please enter a valid email';
+      }
+    },
+    onSaved: (String value) {
+      email = value;
+    },
   );
 }
 
 Widget passswordField() {
-  return Container(
-    margin: EdgeInsets.only(bottom: 25.0),
-    child: TextFormField(
-      // for **** for password
-      obscureText: true,
-      decoration: InputDecoration(
-        labelText: 'Enter Password',
-        hintText: 'Password'
-      ),
+  return TextFormField(
+    // for **** for password
+    obscureText: true,
+    decoration: InputDecoration(
+      labelText: 'Password',
+      hintText: 'Enter Password'
     ),
+    validator: (String value) {
+      if(value.length < 4) {
+        return 'Password is too short';
+      }
+    },
+    onSaved: (String value) {
+      password =value;
+    },
   );
 }
 
@@ -54,7 +80,12 @@ Widget submitButton() {
   return RaisedButton(
     color: Colors.blue,
     child: Text('Submit'),
-    onPressed: () {},
+    onPressed: () {
+      if(formKey.currentState.validate()) {
+        formKey.currentState.save();
+        print('Time to post $email and $password to server');
+      }
+    },
   ); 
 
 }
