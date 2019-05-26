@@ -12,4 +12,4 @@ This repository contains sample apps exploring flutter widgets.
 - Login app UI
 
 ## BLOC Login
-- Login app implementing Form widget and 
+- Login app implementing Form widget and BLOC pattern architecture
