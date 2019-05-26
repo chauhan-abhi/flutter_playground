@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class LoginScreenBloc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,7 +10,7 @@ class LoginScreenBloc extends StatelessWidget {
         children: <Widget>[
           emailField(),
           passwordField(),
-          Container(
+          Container(  
             margin: EdgeInsets.only(top: 25.0),
           ),
           submitButton(),
