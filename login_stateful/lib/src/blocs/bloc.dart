@@ -27,3 +27,7 @@ class Bloc with Validators {
     _passwordController.close();
   }
 }
+
+// any file that imports this class
+// will have access to this single instance of Bloc
+final bloc = Bloc();

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 class Validators {
-  // do ot define stream transformers as function 
+  // dont define stream transformers as function 
   // because every time we have to call the function which will create a 
   // ST. Instead they should be resued highly.
   // Asssign them to instance variables
