@@ -1,16 +1,6 @@
-# login_stateful
+# Login with BLOC pattern
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+A simple login application primarily focused on **STATE MANAGEMENT** using
+- [Stateful widget](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/login_stateful/lib/src/screens/login_screen.dart)
+- [BLOC pattern(Single GLobal Instance)](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/login_stateful/lib/src/screens/login_screen_bloc.dart)
+- BLOC pattern(Scoped Instance)
