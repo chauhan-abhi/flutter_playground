@@ -1,6 +1,7 @@
 # State Management using BLOC pattern
 
-A simple login application primarily focused on **STATE MANAGEMENT** using
+A simple login application primarily focused on **STATE MANAGEMENT** using following methods:
+
 ## Stateful widget
   - To run this implementation, comment the Provider codein [app.dart](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/login_stateful/lib/src/app.dart) and attach [LoginScreen](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/login_stateful/lib/src/screens/login_screen.dart) to body.
   
