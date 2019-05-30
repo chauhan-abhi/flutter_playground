@@ -1,6 +1,6 @@
 # Exploring Flutter widgets
 
-This repository contains sample apps exploring flutter widgets.
+This repository contains sample apps build while exploring flutter widgets.
 
 ## Calculator App
 - Simple app implementing +,-,*,/ features
@@ -11,5 +11,10 @@ This repository contains sample apps exploring flutter widgets.
 ## Login Design
 - Login app UI
 
-## BLOC Login
-- Login app implementing Form widget and BLOC pattern architecture
+## State Management using Streams
+  - using Stateful Widgets
+  - using Global Instance(BLOC pattern) 
+  - using Scoped Instance(BLOC pattern)
+  
+  Downside of the last two approaches is complexity in merging of two streams.
+  Possible solution: [RxDart](https://github.com/ReactiveX/rxdart)
