@@ -13,9 +13,6 @@ class App extends StatelessWidget {
       child: MaterialApp(
       title: "Log Me In!",
       home: Scaffold(
-          // uncomment below line for stateful implementation of the state management
-        // body: LoginScreen(),
-        // uncomment below line for Global Scoped Instance for state management
         body: new LoginScreenScopedImpl(),
       ),
       debugShowCheckedModeBanner: false,
