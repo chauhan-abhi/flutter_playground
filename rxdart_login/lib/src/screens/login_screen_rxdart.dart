@@ -71,14 +71,16 @@ Widget passwordField(Bloc bloc) {
       stream: bloc.submitValid,
       // error comming from email, password field
       // will end up in shnapshot below 
-      // snapshot has hasError() property --look docs
+      // snapshot has hasData() property which goes false
+      // if there is error or no data emmited and true when 
+      // when there is no error.
       builder: (context, snapshot) {
         return RaisedButton(
           child: Text('Login', style: TextStyle(color: Colors.white),),
           color: Colors.blue,
-          onPressed: snapshot.hasError ? null: () {
+          onPressed: snapshot.hasData ? () {
             print('Submitted');
-          },
+          }: null,
         );
       }
     );

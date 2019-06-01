@@ -19,7 +19,7 @@ class Bloc with Validators {
   // final _passwordController = StreamController<String>(); 
   
   //So we use broadcast streams which can be listened more than once
-   final _emailController = StreamController<String>.broadcast();
+  final _emailController = StreamController<String>.broadcast();
   final _passwordController = StreamController<String>.broadcast(); 
 
   // Change data
