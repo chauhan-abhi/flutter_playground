@@ -18,5 +18,6 @@ This repository contains sample apps build while exploring flutter widgets.
   - using RxDart
   
   Downside of the last two approaches is complexity in merging of two streams.
-  Solution: [RxDart](https://github.com/ReactiveX/rxdart)
+  Solution: [RxDart Implementation](https://github.com/chauhan-abhi/flutter_starter_experiments/tree/master/rxdart_login)
   
+ 
