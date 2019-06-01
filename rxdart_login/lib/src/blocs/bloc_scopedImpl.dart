@@ -14,7 +14,6 @@ class Bloc with Validators {
   // Change data
   // Return Type  |getter|shorthand-name| 
   // (optional)
-  // sink
   Function(String) get changeEmail => _emailController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;
 
@@ -28,7 +27,3 @@ class Bloc with Validators {
     _passwordController.close();
   }
 }
-
-// any file that imports this class
-// will have access to this single instance of Bloc
-final bloc = Bloc();
