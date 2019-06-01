@@ -1,3 +1,8 @@
+/**
+ * Stream --> Observable
+ * StreamController --> Subject
+ */
+
 import 'dart:async';
 import 'validators.dart';
 import 'package:rxdart/rxdart.dart';
@@ -19,8 +24,16 @@ class Bloc with Validators {
   // final _passwordController = StreamController<String>(); 
   
   //So we use broadcast streams which can be listened more than once
-  final _emailController = StreamController<String>.broadcast();
-  final _passwordController = StreamController<String>.broadcast(); 
+  //final _emailController = StreamController<String>.broadcast();
+  //final _passwordController = StreamController<String>.broadcast(); 
+
+  // But if we want to access the latest item that has been added
+  // to the controller, and emits that as the first item to the listener
+  // we have to use a speacial StreamController
+  final _emailController = BehaviorSubject<String>();
+  final _passwordController = BehaviorSubject<String>(); 
+
+
 
   // Change data
   // Return Type  |getter|shorthand-name| 
@@ -34,6 +47,15 @@ class Bloc with Validators {
   Stream<bool> get  submitValid =>
     Observable.combineLatest2(email, password, (e, p) => true);
   // cleanup function
+
+  // get access to email, password in here after submit
+  submit() {
+    final validEmail =_emailController.value;
+    final validPassword =_passwordController.value;
+    print('Email is $validEmail');
+    print('Password is $validPassword');
+  }
+
   dispose() {
     _emailController.close();
     _passwordController.close();

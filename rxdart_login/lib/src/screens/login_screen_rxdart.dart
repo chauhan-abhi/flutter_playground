@@ -78,9 +78,7 @@ Widget passwordField(Bloc bloc) {
         return RaisedButton(
           child: Text('Login', style: TextStyle(color: Colors.white),),
           color: Colors.blue,
-          onPressed: snapshot.hasData ? () {
-            print('Submitted');
-          }: null,
+          onPressed: snapshot.hasData ? bloc.submit: null,
         );
       }
     );
