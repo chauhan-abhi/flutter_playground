@@ -12,3 +12,7 @@ A simple login application primarily focused on **STATE MANAGEMENT** using follo
   
 ## BLOC pattern(Scoped Instance)]
 - To run this implementation, uncomment the Provider code in [app.dart](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/login_stateful/lib/src/app.dart) and attach [LoginScreenScopedImpl](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/login_stateful/lib/src/screens/login_screen_scopedImpl.dart) to body.
+
+## BLOC pattern(RxDart Implementation)]
+- This is done to leverage the combineLatest method of combining multiple streams. 
+See file [bloc_rxartImpl.dart](https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/rxdart_login/lib/src/blocs/bloc_rxdartImpl.dart) for implementation details.
