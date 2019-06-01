@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/login_screen_bloc.dart';
-import 'screens/login_screen_scopedImpl.dart';
+import 'screens/login_screen_rxdart.dart';
 import 'blocs/providers.dart';
 
 class App extends StatelessWidget {
