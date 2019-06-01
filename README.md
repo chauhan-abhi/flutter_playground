@@ -15,6 +15,8 @@ This repository contains sample apps build while exploring flutter widgets.
   - using Stateful Widgets
   - using Global Instance(BLOC pattern) 
   - using Scoped Instance(BLOC pattern)
+  - using RxDart
   
   Downside of the last two approaches is complexity in merging of two streams.
-  Possible solution: [RxDart](https://github.com/ReactiveX/rxdart)
+  Solution: [RxDart](https://github.com/ReactiveX/rxdart)
+  
