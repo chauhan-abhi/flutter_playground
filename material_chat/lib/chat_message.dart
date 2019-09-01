@@ -6,7 +6,7 @@ const String _name = "Abhijeet";
 class ChatMessage extends StatelessWidget {
   final String text;
 
-  ChatMessage({this.text})
+  ChatMessage({this.text});
    
   @override
   Widget build(BuildContext context) {
