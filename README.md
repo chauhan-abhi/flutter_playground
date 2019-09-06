@@ -20,4 +20,7 @@ This repository contains sample apps build while exploring flutter widgets.
   Downside of the last two approaches is complexity in merging of two streams.
   Solution: [RxDart Implementation](https://github.com/chauhan-abhi/flutter_starter_experiments/tree/master/rxdart_login)
   
+## [CryptoApp](https://github.com/chauhan-abhi/flutter_starter_experiments/tree/master/crypto_app)
+  - App which fetches data from [Coinmarket API](https://coinmarketcap.com/api/) and displays a list of cryptocurrencies in a   ListView
+  
  
