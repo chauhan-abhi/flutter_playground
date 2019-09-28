@@ -20,14 +20,26 @@ class _HomePageState extends State<HomePage> {
       appBar: new AppBar(
         title: new Text("Utils App"),
       ),
-      body: new AppBody()
+      body: new UtilBody()
     );
   }
 }
 
-class AppBody extends StatelessWidget {
+class UtilBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
+    return new Container(
+      child: new Center(
+        child: new RaisedButton( 
+          child: new Text("Click Me", style: new TextStyle(color: Colors.white),
+          ),
+          
+          onPressed: () => Scaffold.of(context).showSnackBar(new SnackBar(
+            content: new Text("File downloading started"),
+            duration: new Duration(seconds: 3),
+          )),
+        ),
+      ),
+    );
   }
 }
