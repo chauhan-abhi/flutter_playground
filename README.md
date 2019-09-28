@@ -2,6 +2,57 @@
 
 This repository contains sample apps build while exploring flutter widgets.
 
+## [Bottom Navigation](https://github.com/chauhan-abhi/flutter_starter_experiments/tree/master/bottom_nav)
+
+<table>
+  <tr><td> <b>Tab Bar</b> </td> <td> <b>Bottom Navigation</b> </td></tr>
+  <tr>
+<td>
+  <pre> 
+   @override
+  void initState() {
+    super.initState();
+    tabController =
+    new TabController(
+      length: 2, 
+      vsync: this);
+  }
+  ----------------------------
+  ----------------------------
+  new TabBarView(
+    children: <Widget>[
+    new Page("First"),
+    new Page("Second")
+    ],
+    controller: tabController,
+    ),
+     </pre>
+</td>
+  
+<td>
+  <pre> 
+  bottomNavigationBar:
+  new Material(
+    color: Colors.teal,
+    child: new TabBar(
+      controller: tabController,
+      tabs: <Widget>[
+        new Tab(
+        icon: new Icon(Icons.favorite),
+        ),
+      new Tab(
+        icon: new Icon(Icons.email),
+      )
+      ],
+     ),
+   ),
+</td>  
+<td>
+  <img src = "https://github.com/chauhan-abhi/flutter_starter_experiments/blob/master/screenshots/Screenshot_20190928_130256_com.example.bottom_nav.jpg" width = 360>
+</td>
+</tr>
+  </table>
+
 ## [Material Chat App](https://github.com/chauhan-abhi/flutter_starter_experiments/tree/master/material_chat)
 
 <table>
